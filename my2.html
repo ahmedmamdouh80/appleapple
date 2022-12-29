@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>APPLE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 100px;
+  text-align: center;
+  background:black;
+  color: white;
+}
+
+
+
+
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Style the top navigation bar */
+.navbar a {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.div1 {
+
+width:33.33%;
+float:right;
+}
+.div2 {
+
+width:33.33%;
+float:left;
+}
+.div3 {
+
+width:33.33%;
+margin:0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: ;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+</head>
+<body>
+
+<div class="header">
+
+<a href="my2.html"><img src="apple.png"ait=""width="45"height="45"><br></a>
+ 
+</div>
+
+ <div class="topnav">
+ 
+ 
+  <a href="my2.html"><img src="apple.png"ait=""width="20"height="20"><br></a>
+  
+ 
+ 
+   <a href="#home">Home</a>
+   <a href="sign in.html" class="right">Sign in</a>
+  
+  
+  
+
+
+
+
+
+  
+  
+  <div class="dropdown">
+    <button class="dropbtn">Products
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+	
+	
+	  <a href="mac.html"   target="_blank"   >mac</a>
+      <a href="ipad.html"   target="_blank"   >ipad</a>
+      <a href="iphone.html"  target="_blank"   >iphone</a>
+	  <a href="applewatch.html"   target="_blank"       >apple watch</a>
+	<a href="airpods.html"   target="_blank"   >airpods</a>
+	
+    
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+   <a href="cart.html" class="left"> <img src="97.png"  ait=""width="20"height="20"> cart </a>
+  
+  
+  
+  
+  
+  
+ 
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+  
+  
+
+<div class="row">
+  <div class="side">
+    <h2><img src="1414.png"ait=""width="1250"height="230"><br></h2>
+
+    <h1 style="color:lightblue" >MORE PRODUCTS</h1>
+   
+  </div>
+ 
+  
+  
+  
+  
+
+  
+  
+  
+  
+  <div class="div1">
+  <div class="card">
+ <a href="iphone.html"> <img src="144.png"  ait=""width="100"height="100"></a>
+  <a href="iphone.html"     style="color:black; text-decoration:none ;" ><h1>   iphone 14 pro   </h1></a>
+  <p class="price">$1100</p>
+  <p></p>
+ <a href="cart.html" <p><button>Add to Cart </button></p>  </a>
+</div>
+ </div>
+  
+  
+  
+  <div class="div1">
+  
+  <div class="card">
+  <a href="iphone.html"  ><img src="144.png" alt="Denim Jeans"  style="ait=""width="100"height="100""></a>
+  <a href="iphone.html"     style="color:black; text-decoration:none ;" ><h1>   iphone 14 </h1></a>
+  <p class="price">$999</p>
+  <p></p>
+ <a href="cart.html" <p><button>Add to Cart </button></p>  </a>
+</div>
+ </div>
+  
+  
+  
+  
+  <div class="div1">
+  
+  <div class="card">
+   <a href="iphone.html"  ><img src="shopping13.png" alt="Denim Jeans"  style="ait=""width="100"height="100""></a>
+  <a href="iphone.html"     style="color:black; text-decoration:none ;" ><h1>   iphone 13 pro   </h1></a>
+  <p class="price">$899</p>
+  <p></p>
+ <a href="cart.html" <p><button>Add to Cart </button></p>  </a>
+</div>
+ </div>
+  
+  
+  
+  
+  
+  <div class="div1">
+  <div class="card">
+   <a href="iphone.html"  ><img src="shopping13.png" alt="Denim Jeans"  style="ait=""width="100"height="100""></a>
+ <a href="iphone.html"     style="color:black; text-decoration:none ;" ><h1>   iphone 13  </h1></a> 
+  <p class="price">$799</p>
+  <p></p>
+ <a href="cart.html" <p><button>Add to Cart </button></p>  </a>
+</div>
+ </div>
+  
+  
+  
+  
+  <div class="div1">
+  <div class="card">
+ <a href="applewatch.html"> <img src="watch.png" alt="Denim Jeans"  style="ait=""width="100"height="100""></a>
+  <a href="applewatch.html"     style="color:black; text-decoration:none ;" ><h1> apple watch ultra</h1></a>
+  <p class="price">$499</p>
+  <p></p>
+ <a href="cart.html" <p><button>Add to Cart </button></p>  </a>
+</div>
+ </div>
+  
+  
+  
+  
+  <div class="div1">
+  
+  <div class="card">
+ <a href="ipad.html"> <img src="ipad.jpg" alt="Denim Jeans"  style="ait=""width="100"height="100""></a>
+  <a href="ipad.html"     style="color:black; text-decoration:none ;" ><h1>   ipad   </h1></a>
+  <p class="price">$499</p>
+  <p></p>
+ <a href="cart.html" <p><button>Add to Cart </button></p>  </a>
+</div>
+ </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="div1">
+  <div class="card">
+ <a href="ipad.html"> <img src="ipad.jpg"  style="ait=""width="100"height="100""></a>
+  <a href="ipad.html"     style="color:black; text-decoration:none ;" ><h1>   ipad pro   </h1></a>
+  <p class="price">$899</p>
+  <p></p>
+ <a href="cart.html" <p><button>Add to Cart </button></p>  </a>
+</div>
+ </div>
+  
+  
+
+
+<div class="div1">
+
+<div class="card">
+   <a href="iphone.html"  ><img src="144.png" alt="Denim Jeans" style="ait=""width="100"height="100""></a>
+  <a href="iphone.html"     style="color:black; text-decoration:none ;" ><h1>   iphone 14   </h1></a>
+  <p class="price">$999</p>
+  <p></p>
+ <a href="cart.html" <p><button>Add to Cart </button></p>  </a>
+</div>
+ </div>
+  
+  
+  
+     <div class="div1">
+  
+  <div class="card">
+   <a href="airpods.html"  ><img src="air1.jpg" alt="Denim Jeans"  style="ait=""width="100"height="100""></a>
+  <a href="airpods.html"     style="color:black; text-decoration:none ;" ><h1>   Airpods Pro   </h1></a>
+  <p class="price">$299</p>
+  <p></p>
+ <a href="cart.html" <p><button>Add to Cart </button></p>  </a>
+</div>
+ </div>
+ 
+ 
+ 
+ 
+  <div class="div1">
+  
+  <div class="card">
+   <a href="airpods.html"  ><img src="air2.jpg" alt="Denim Jeans"  style="ait=""width="100"height="100""></a>
+  <a href="airpods.html"     style="color:black; text-decoration:none ;" ><h1>   Airpods Max  </h1></a>
+  <p class="price">$399</p>
+  <p></p>
+ <a href="cart.html" <p><button>Add to Cart </button></p>  </a>
+</div>
+ </div>
+ 
+ 
+  
+   <div class="div1">
+  
+  <div class="card">
+   <a href="airpods.html"  ><img src="air3.jpg" alt="Denim Jeans"  style="ait=""width="100"height="100""></a>
+  <a href="airpods.html"     style="color:black; text-decoration:none ;" ><h1>   Airpods pro   </h1></a>
+  <p class="price">$899</p>
+  <p></p>
+ <a href="cart.html" <p><button>Add to Cart </button></p>  </a>
+</div>
+ </div>
+ 
+  
+  
+  
+  
+  <div class="div1">
+  
+  <div class="card">
+   <a href="ipad.html"  ><img src="ipad pro.jpg" alt="Denim Jeans" style="ait=""width="100"height="100""></a>
+  <a href="ipad.html"     style="color:black; text-decoration:none ;" ><h1>   ipad pro   </h1></a>
+  <p class="price">$599</p>
+  <p></p>
+ <a href="cart.html" <p><button>Add to Cart </button></p>  </a>
+</div>
+ 
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="main">
+    <h1>Apple iPhone 14 And iPhone 14 Plus Review: Minor Upgrades For A Worthy Contender</h1>
+	 <h5>Oct 14, 2022,06:34pm EDT</h5>
+	<img src="pro.png"ait=""width="1250"height="500">
+    
+    <div class="fakeimg" style="height:200px;"><h4>The Apple iPhone 14 is the least expensive current iPhone you can buy—and that $200 savings over an iPhone 14 Pro is its main appeal.
+	It’s the first iPhone to consider if you don’t want to splash out on an iPhone 14 Pro and don’t need the three cameras or always-on display the extra money buys. 
+	The iPhone 14 is a worthwhile contender, even if its external design appears largely the same as last year’s model. Inside, it is an all-new handset. 
+	The larger iPhone 14 Plus—the first 6.7-inch iPhone introduced without the corresponding price bump that comes with being a Pro model—shares those new internal guts of the standard iPhone.
+	Now, the biggest iPhone is accessible to many more pockets.
+
+</h4></div>
+    <p> <h1>IPhone 14 Pro's Camera </h1></p>
+	
+	
+	
+    <p><h4>The biggest change to the iPhone 14 Pro’s camera is the addition of a new 48-megapixel quad-pixel main sensor that Apple says enables better photos and new features like an additional 2x telephoto for a total of four zoom options.
+	While the main camera is obviously the main star of the show, Apple says that all the cameras have received a boost in low-light performance thanks to a new Photonic Engine.
+</h4></p>
+<img src="6.png"ait=""width="1200"height="500"><br>
+    <p><h1>Apple iPhone 14: Pricing </h1></p>
+    
+    
+     
+    <p><h4>iPhone 14 series was launched globally last week. Apple announced four new models this year namely, iPhone 14, iPhone 14 Plus, iPhone 14 Pro, and iPhone 14 Pro Max. This time around the iPhone mini has been removed and the company has added the iPhone Plus model to the portfolio. The iPhone 14 series this time around comes with incremental upgrades over the last-gen iPhone 13 lineup.
+
+Interestingly, the iPhone 14 and iPhone 14 Plus are powered by the last-gen A15 Bionic chip while the Pro and Pro Max are the two devices to get the new and the latest A16 Bionic SoC. The RAM capacity has been increased by 2GB on the vanilla model and the battery capacities on the iPhone 14 are also similar to the last gen.
+
+Also Read: iPhone 14 Buying Guide: Which iPhone 14 Series Phone (iPhone 14/ 14 Plus/ 14 Pro/ 14 Pro Max) is Best for You . Which iPhone is right for you? ; The ultimate iPhone. From $999 · iPhone 14 Pro ; A total powerhouse. From $799 · iPhone 14 ; As amazing as ever. From $599 · iPhone .
+</h4></p>
+  <div class="fakeimg" style=""width="40"height="400"><img src="5.jpg"ait=""width="1000"height="400"></div>
+
+<p><h4>iPhone 14 series was launched globally last week. Apple announced four new models this year namely, iPhone 14, iPhone 14 Plus, iPhone 14 Pro, and iPhone 14 Pro Max. This time around the iPhone mini has been removed and the company has added the iPhone Plus model to the portfolio. The iPhone 14 series this time around comes with incremental upgrades over the last-gen iPhone 13 lineup.
+
+Interestingly, the iPhone 14 and iPhone 14 Plus are powered by the last-gen A15 Bionic chip while the Pro and Pro Max are the two devices to get the new and the latest A16 Bionic SoC. The RAM capacity has been increased by 2GB on the vanilla model and the battery capacities on the iPhone 14 are also similar to the last gen.
+
+Also Read: iPhone 14 Buying Guide: Which iPhone 14 Series Phone (iPhone 14/ 14 Plus/ 14 Pro/ 14 Pro Max) is Best for You . Which iPhone is right for you? ; The ultimate iPhone. From $999 · iPhone 14 Pro ; A total powerhouse. From $799 · iPhone 14 ; As amazing as ever. From $599 · iPhone . This Page Build By Ahmed Mamdouh  .
+</h4></p>
+
+  </div>
+</div>
+
+<div class="footer">
+ 
+  <a href="contactus.html"  style="color:black;
+  background-color: transparent;
+  text-decoration:none ;" >  <h2   style="font-family:verdana;"  >Contact Us</h2></a>
+  
+  
+  
+   <a href="about us.html"  style="color:black;
+  background-color: transparent;
+  text-decoration:none ;" >  <h3   style="font-family:verdana;"  >About Us</h3></a>
+  
+  
+  
+ 
+
+  Copyright © 2022 Apple Inc.    |All rights reserved.    |Privacy Policy    |Terms of Use     |Sales and Refunds   |Legal Site     |Map
+</div>
+
+</body>
+</html>
+<style>
+.header{
+background-color:black;
+padding:5px;
+text-align:center;
+font-size:5px;
+}
+</style>
+
+
+
+
+<div class="navbar a">
+  <a href="https://ar-ar.facebook.com/apple/">Facebook</a>
+  <a href="">Whatsapp</a>
+  <a href="https://twitter.com/apple?lang=ar">Twitter</a>
+  <a href="https://www.instagram.com/apple/">Instagram</a>
+ <a href="cart.html" class="right"> <img src="97.png"  ait=""width="20"height="20">                     </a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+ 
